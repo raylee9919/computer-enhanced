@@ -18,7 +18,7 @@ int main(int argc, char **argv) {
     nob_cmd_append(&cmd, "cl", "-nologo", "-std:c++17", "-Od", "-W4", "-Z7", "./src/page_fault.cpp", "-Fe:./build/page_fault.exe");
     nob_cmd_append(&cmd, "-DNOMINMAX");
     nob_cmd_append(&cmd, "-link", "kernel32.lib");
-    nob_log(NOB_INFO, "Building project");
+    nob_log(NOB_INFO, "Building project...");
     if (!nob_cmd_run_sync(cmd)) {
         return 1;
     }
